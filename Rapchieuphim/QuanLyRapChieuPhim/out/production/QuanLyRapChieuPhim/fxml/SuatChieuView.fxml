@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.rapchieuphim.controller.SuatChieuController"
+      spacing="8" style="-fx-padding:20">
+    <HBox spacing="10">
+        <Label text="Phim:"/>
+        <ComboBox fx:id="cbPhim"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Ngày giờ:"/>
+        <TextField fx:id="txtNgayGio" promptText="dd/MM/yyyy HH:mm"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Phòng chiếu:"/>
+        <TextField fx:id="txtPhongChieu"/>
+    </HBox>
+    <Button text="Thêm suất chiếu" onAction="#handleThemSuatChieu"/>
+</VBox>

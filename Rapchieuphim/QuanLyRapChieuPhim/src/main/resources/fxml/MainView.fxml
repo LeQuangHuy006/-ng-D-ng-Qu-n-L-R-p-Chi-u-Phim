@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="900" prefHeight="600">
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab text="Lịch chiếu phim">
+                <!-- Nội dung lịch chiếu -->
+            </Tab>
+            <Tab text="Doanh thu">
+                <!-- Nội dung doanh thu -->
+            </Tab>
+            <Tab text="Danh sách khách hàng">
+                <!-- Nội dung khách hàng -->
+            </Tab>
+            <Tab text="Quản lý phim">
+                <fx:include source="PhimView.fxml"/>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

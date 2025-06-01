@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.rapchieuphim.controller.AdminController"
+            prefWidth="900" prefHeight="520">
+    <top>
+        <MenuBar>
+            <Menu text="Lịch công chiếu"/>
+            <Menu text="Doanh thu"/>
+            <Menu text="Danh sách khách hàng"/>
+            <Menu text="Thông tin tài khoản"/>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Danh sách vé và phim đang chiếu">
+                <font>
+                    <Font name="System Bold Italic" size="18"/>
+                </font>
+            </Label>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Từ:"/>
+                <DatePicker fx:id="dateFrom"/>
+                <Label text="Đến:"/>
+                <DatePicker fx:id="dateTo"/>
+            </HBox>
+            <TableView fx:id="tableVe" prefHeight="350">
+                <columns>
+                    <TableColumn fx:id="colMaVe" text="Mã vé" prefWidth="50"/>
+                    <TableColumn fx:id="colTenPhim" text="Tên phim" prefWidth="170"/>
+                    <TableColumn fx:id="colThoiGian" text="Thời gian" prefWidth="120"/>
+                    <TableColumn fx:id="colGiaVe" text="Giá vé" prefWidth="70"/>
+                    <TableColumn fx:id="colThoiLuong" text="Thời lượng" prefWidth="80"/>
+                    <TableColumn fx:id="colTheLoai" text="Thể loại" prefWidth="90"/>
+                    <TableColumn fx:id="colSoLuong" text="Số lượng" prefWidth="70"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    <left>
+        <VBox spacing="8" style="-fx-background-color: #e5e5e5;" prefWidth="260">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="Mã vé:"/>
+            <TextField fx:id="txtMaVe"/>
+            <Label text="Suất chiếu:"/>
+            <ComboBox fx:id="cbSuatChieu" promptText="Chọn suất chiếu"/>
+            <Label text="ID khách hàng:"/>
+            <TextField fx:id="txtIdKhachHang"/>
+            <Label text="Số ghế:"/>
+            <TextField fx:id="txtSoGhe"/>
+            <Label text="Giá vé:"/>
+            <TextField fx:id="txtGiaVe"/>
+            <Separator/>
+            <Label text="Tên phim:"/>
+            <TextField fx:id="txtTenPhim" editable="false"/>
+            <Label text="Thời gian:"/>
+            <TextField fx:id="txtThoiGian" promptText="dd/MM/yyyy HH:mm" editable="false"/>
+            <Label text="Thời lượng:"/>
+            <TextField fx:id="txtThoiLuong" editable="false"/>
+            <Label text="Thể loại:"/>
+            <TextField fx:id="txtTheLoai" editable="false"/>
+            <Label text="Số lượng:"/>
+            <TextField fx:id="txtSoLuong" editable="false"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Thêm" fx:id="btnThem" onAction="#handleThem"/>
+                <Button text="Sửa" fx:id="btnSua" onAction="#handleSua"/>
+                <Button text="Xoá" fx:id="btnXoa" onAction="#handleXoa"/>
+            </HBox>
+        </VBox>
+    </left>
+</BorderPane>

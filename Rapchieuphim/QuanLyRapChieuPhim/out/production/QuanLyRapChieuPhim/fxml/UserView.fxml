@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.rapchieuphim.controller.UserController">
+    <Label text="Chào mừng Người dùng!"/>
+    <Button text="Xem phim" onAction="#handleViewMovies"/>
+    <Button text="Đặt vé" onAction="#handleBookTicket"/>
+    <Button fx:id="btnLogout" text="Đăng xuất" onAction="#handleLogout"/>
+</VBox>

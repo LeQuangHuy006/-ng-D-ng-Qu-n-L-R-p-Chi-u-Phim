@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.rapchieuphim.controller.LoginController">
+    <Label text="Đăng nhập hệ thống"/>
+    <TextField fx:id="txtUsername" promptText="Tên đăng nhập"/>
+    <PasswordField fx:id="txtPassword" promptText="Mật khẩu"/>
+    <HBox spacing="10">
+        <Button text="Đăng nhập Người dùng" onAction="#loginUser"/>
+        <Button text="Đăng nhập Quản lý" onAction="#loginAdmin"/>
+    </HBox>
+    <Button text="Tạo tài khoản mới" onAction="#showRegister"/>
+    <Label fx:id="lblMessage" textFill="red"/>
+</VBox>

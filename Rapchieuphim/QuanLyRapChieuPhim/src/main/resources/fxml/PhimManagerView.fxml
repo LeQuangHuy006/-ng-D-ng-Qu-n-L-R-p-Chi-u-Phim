@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.rapchieuphim.controller.PhimManagerController"
+            prefWidth="700" prefHeight="450">
+    <top>
+        <Label text="Quản Lý Danh Sách Phim" style="-fx-font-size:20px; -fx-padding:10 0 10 0; -fx-font-weight:bold;"/>
+    </top>
+    <center>
+        <TableView fx:id="tablePhim">
+            <columns>
+                <TableColumn fx:id="colIdPhim" text="ID Phim" prefWidth="80"/>
+                <TableColumn fx:id="colTenPhim" text="Tên phim" prefWidth="180"/>
+                <TableColumn fx:id="colTheLoai" text="Thể loại" prefWidth="100"/>
+                <TableColumn fx:id="colThoiLuong" text="Thời lượng (phút)" prefWidth="120"/>
+                <TableColumn fx:id="colMoTa" text="Mô tả" prefWidth="180"/>
+            </columns>
+        </TableView>
+    </center>
+    <right>
+        <VBox spacing="8" alignment="TOP_CENTER" prefWidth="260" style="-fx-background-color:#f7f7f7">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="ID Phim:"/>
+            <TextField fx:id="txtIdPhim"/>
+            <Label text="Tên phim:"/>
+            <TextField fx:id="txtTenPhim"/>
+            <Label text="Thể loại:"/>
+            <TextField fx:id="txtTheLoai"/>
+            <Label text="Thời lượng (phút):"/>
+            <TextField fx:id="txtThoiLuong"/>
+            <Label text="Mô tả:"/>
+            <TextField fx:id="txtMoTa"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Thêm" fx:id="btnThem" onAction="#handleThem"/>
+                <Button text="Sửa" fx:id="btnSua" onAction="#handleSua"/>
+                <Button text="Xóa" fx:id="btnXoa" onAction="#handleXoa"/>
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>

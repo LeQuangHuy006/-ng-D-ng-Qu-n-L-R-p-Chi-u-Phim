@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.rapchieuphim.controller.RegisterController">
+    <Label text="Tạo tài khoản mới"/>
+    <TextField fx:id="txtNewUsername" promptText="Tên đăng nhập"/>
+    <PasswordField fx:id="txtNewPassword" promptText="Mật khẩu"/>
+    <PasswordField fx:id="txtConfirmPassword" promptText="Nhập lại mật khẩu"/>
+    <Button text="Đăng ký" onAction="#register"/>
+    <Label fx:id="lblRegisterMsg" textFill="red"/>
+</VBox>
